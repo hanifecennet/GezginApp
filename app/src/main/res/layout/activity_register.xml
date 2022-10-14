@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/register_login_background">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/register_eposta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/e_mail_adreai_giriniz"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorOrange"
+            android:padding="15dp"
+            />
+
+        <EditText
+            android:id="@+id/register_sifre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_eposta"
+            android:hint="@string/sifre"
+            android:padding="15dp"
+            android:textColorHint="@color/colorOrange"
+            android:layout_marginTop="15dp"
+
+            />
+        <EditText
+            android:id="@+id/register_sifre_onay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_sifre"
+            android:hint="@string/sifre_onay"
+            android:textColorHint="@color/colorOrange"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/kayitol_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_sifre_onay"
+            android:layout_marginTop="15dp"
+            android:padding="15dp"
+            android:text="@string/kayit_ol"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/register_login_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/login_eposta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:hint="Email Adresiniz"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@color/colorGray" />
+
+        <EditText
+            android:id="@+id/login_sifre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_eposta"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:hint="Parola"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#fd7953"
+            android:textColorHint="@color/colorGray" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_sifre"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPurple"
+            android:padding="16dp"
+            android:text="Giriş Yap"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_button"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPurple"
+            android:padding="16dp"
+            android:text="Kayıt Ol"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

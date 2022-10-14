@@ -1,0 +1,118 @@
+
+
+
+
+
+
+            <?xml version="1.0" encoding="utf-8"?>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".AddPhotoActivity"
+                android:orientation="vertical"
+                android:background="@color/colorBlue">
+
+                <ImageView
+                    android:id="@+id/user_saved_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="140dp"
+                    android:drawableTop="@drawable/ic_menu_cameraa"/>
+
+                <Button
+                    android:id="@+id/select_photo_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorBluee"
+                    android:text="Fotoğraf Seç"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/save_photo_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorBluee"
+                    android:text="Fotoğrafı Kaydet"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/go_to_gallery_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/colorBluee"
+                    android:text="Galeri"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+            package com.example.intelligentdaily;
+
+            import android.app.Activity;
+            import android.os.Bundle;
+            import android.view.View;
+            import android.widget.Button;
+
+            import com.google.firebase.database.FirebaseDatabase;
+
+            public class AddSocialMedia extends Activity {
+
+            Button goToInstagram;
+            Button goToFacebook;
+            Button goToTwitter;
+            FirebaseDatabase firebaseDatabase;
+            DatabaseReference myRef;
+
+            @Override
+            protected void onCreate (Bundle savedInstanceState){
+            super.onCreate (savedInstanceState);
+            setContentView(R.layout.activity_social_media);
+
+            goToInstagram=(Button) findViewById(R.id.go_to_instagram);
+            goToFacebook=(Button) findViewById(R.id.go_to_facebook);
+            goToTwitter=(Button) findViewById(R.id.go_to_twitter);
+
+            goToInstagram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            onBackPressed();
+            }
+            });
+            goToFacebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { onBackPressed();
+            }
+            });
+            goToTwitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { onBackPressed();
+            }
+            });
+            }
+            }
